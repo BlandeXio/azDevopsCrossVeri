@@ -21,6 +21,19 @@ steps:
     cwd: 'ios/'
     forceRepoUpdate: true
   displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
+- task: InstallAppleCertificate@2
+  displayName: "Install Apple Certificate"
+  inputs:
+    certSecureFile: 'ios/AppcenterDemo.p12'
+    certPwd: '$(CertificatePassword)'
+
+- task: InstallAppleProvisioningProfile@1
+  displayName: "Install Apple provisioning profile"
+  inputs:
+    provisioningProfileLocation: 'secureFiles'
+    provProfileSecureFile: 'reactNativeAppcenterDemo.mobileprovision'
+
+
 - task: Xcode@5
   inputs:
     actions: 'build'
@@ -29,3 +42,17 @@ steps:
     configuration: 'Debug'
     xcWorkspacePath: 'ios/AwesomeProjectRN.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
+    packageApp: true
+    exportPath: 'output/package'
+    archivePath: 'output/archive'
+    signingOption: 'auto'
+
+- task: AppCenterDistribute@3
+  inputs:
+    serverEndpoint: 'louisAppCenter'
+    appSlug: 'llslouis-hotmail.com/azDevOpsRN'
+    appFile: 'output/package/AwesomeProjectRN.ipa'
+    symbolsDsymFiles: 'output/archive/AwesomeProjectRN.xcarchive/dSYMs'
+    releaseNotesOption: 'input'
+    releaseNotesInput: 'This is a new release'
+    destinationType: 'groups'
