@@ -21,17 +21,6 @@ steps:
     cwd: 'ios/'
     forceRepoUpdate: true
   displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
-- task: InstallAppleCertificate@2
-  displayName: "Install Apple Certificate"
-  inputs:
-    certSecureFile: 'AppcenterDemo.p12'
-    certPwd: ''
-
-- task: InstallAppleProvisioningProfile@1
-  displayName: "Install Apple provisioning profile"
-  inputs:
-    provisioningProfileLocation: 'secureFiles'
-    provProfileSecureFile: 'reactNativeAppcenterDemo.mobileprovision'
 
 
 - task: Xcode@5
@@ -45,7 +34,7 @@ steps:
     packageApp: true
     exportPath: 'output/package'
     archivePath: 'output/archive'
-    signingOption: 'manual'
+    signingOption: 'auto'
 
 - task: AppCenterDistribute@3
   inputs:
