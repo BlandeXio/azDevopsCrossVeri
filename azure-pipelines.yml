@@ -25,7 +25,7 @@ steps:
   displayName: "Install Apple Certificate"
   inputs:
     certSecureFile: 'AppcenterDemo.p12'
-    certPwd: '$(CertificatePassword)'
+    certPwd: ''
 
 - task: InstallAppleProvisioningProfile@1
   displayName: "Install Apple provisioning profile"
