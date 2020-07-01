@@ -655,8 +655,8 @@
 			baseConfigurationReference = 962F4C4D1392BBA10D37B083 /* Pods-AwesomeProjectRN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 7.4;
 				DEVELOPMENT_TEAM = 99M8DB5J3W;
 				INFOPLIST_FILE = AwesomeProjectRN/Info.plist;
@@ -668,7 +668,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.reactjs.native.example.AwesomeProjectRN;
 				PRODUCT_NAME = AwesomeProjectRN;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = reactNativeAppcenterDemo;
 				VALID_ARCHS = "arm64 arm64e";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -893,7 +893,7 @@
 				00E356F71AD99517003FC87E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AwesomeProjectRN" */ = {
 			isa = XCConfigurationList;
@@ -902,7 +902,7 @@
 				13B07F951A680F5B00A75B9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AwesomeProjectRN-tvOS" */ = {
 			isa = XCConfigurationList;
@@ -911,7 +911,7 @@
 				2D02E4981E0B4A5E006451C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AwesomeProjectRN-tvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -920,7 +920,7 @@
 				2D02E49A1E0B4A5E006451C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AwesomeProjectRN" */ = {
 			isa = XCConfigurationList;
@@ -929,7 +929,7 @@
 				83CBBA211A601CBA00E9B192 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
