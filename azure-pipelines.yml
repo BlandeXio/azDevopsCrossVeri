@@ -26,14 +26,14 @@ steps:
 - task: InstallAppleCertificate@2
   displayName: "Install Apple Certificate"
   inputs:
-    certSecureFile: 'AppcenterDemo.p12'
+    certSecureFile: 'reactNativeDev.p12'
     certPwd: ''
 
 - task: InstallAppleProvisioningProfile@1
   displayName: "Install Apple provisioning profile"
   inputs:
     provisioningProfileLocation: 'secureFiles'
-    provProfileSecureFile: 'reactNativeAppcenterDemo.mobileprovision'
+    provProfileSecureFile: 'reactNativeDevDemo.mobileprovision'
 
 - task: ios-bundle-version@1
   inputs:
