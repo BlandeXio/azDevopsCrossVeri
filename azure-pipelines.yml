@@ -35,6 +35,14 @@ steps:
     provisioningProfileLocation: 'secureFiles'
     provProfileSecureFile: 'reactNativeAppcenterDemo.mobileprovision'
 
+- task: ios-bundle-version@1
+  inputs:
+    sourcePath: 'ios/AwesomeProjectRN/Info.plist'
+    versionCodeOption: 'buildid'
+    versionCode: '$(Build.BuildId)'
+    printFile: true
+
+
 - task: Xcode@5
   inputs:
     actions: 'build'
