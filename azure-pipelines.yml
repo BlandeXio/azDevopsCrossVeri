@@ -56,6 +56,11 @@ steps:
     archivePath: 'output/archive'
     signingOption: 'default'
     args: '-allowProvisioningUpdates'
+    signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
+    provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
+
+
+
 
 
 - task: AppCenterDistribute@3
