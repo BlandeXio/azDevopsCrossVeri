@@ -17,6 +17,12 @@ steps:
     targetType: 'inline'
     script: xcodebuild -showsdks
 
+- task: NodeTool@0
+  inputs:
+    versionSpec: '14.4.0'
+  displayName: 'Install Node'
+
+
 
 - task: Yarn@3
   inputs:
