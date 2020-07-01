@@ -53,7 +53,7 @@ steps:
   inputs:
     actions: 'build'
     scheme: 'AwesomeProjectRN'
-    sdk: 'iphoneos13'
+    sdk: 'iphoneos13.5'
     configuration: 'Debug'
     xcWorkspacePath: 'ios/AwesomeProjectRN.xcworkspace'
     xcodeVersion: 'default' # Options: 8, 9, 10, default, specifyPath
