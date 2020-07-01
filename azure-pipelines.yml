@@ -46,7 +46,7 @@ steps:
     packageApp: true
     exportPath: 'output/package'
     archivePath: 'output/archive'
-    signingOption: 'default'
+    signingOption: 'manual'
 
 - task: AppCenterDistribute@3
   inputs:
