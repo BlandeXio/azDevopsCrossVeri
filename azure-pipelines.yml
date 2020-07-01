@@ -55,6 +55,7 @@ steps:
     exportPath: 'output/package'
     archivePath: 'output/archive'
     signingOption: 'auto'
+    args: '-allowProvisioningUpdates'
 
 - task: AppCenterDistribute@3
   inputs:
